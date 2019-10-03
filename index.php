@@ -1,7 +1,14 @@
 <?php
 require_once("connect.php");
 require_once("function-new.php");
-$thisPagename = $_GET["page"] ?? "HOME";
+$uriSegments = explode("/", parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+
+$thisPagename = array_pop($uriSegments);
+if ($thisPagename == ""){
+	$thisPagename = "index";
+}
+
+// $thisPagename = $_GET["page"] ?? "HOME";
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +28,7 @@ $thisPagename = $_GET["page"] ?? "HOME";
 	<section>
 		<div>
 			<?php
+			// echo $thisPagename;
 			makeContent($conn, $thisPagename);
 			?>
 		</div>
