@@ -8,7 +8,7 @@ $loggedin = False;
 <head></head>
 <body>
   <nav>
-    <?php makeNav($myNav, $loggedin); ?>
+    <?php makeNav($myNav,$loggedin); ?>
   </nav>
   <section>
     <div>

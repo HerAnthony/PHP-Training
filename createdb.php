@@ -10,10 +10,9 @@ CREATE TABLE `content` (
   `pagecontent` mediumtext
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `content` (`id`, `pagename`, `pagetitle`, `pagecontent`) VALUES
-(1, 'HOME', 'Welcome to our homepage, yo', '<p>This is the page contenct</p>'),
-(2, 'About', 'A little about us.', '<p>We started with a simple idea: ball bearings.  And then we made more ball bearings.  The end.</p>'),
-(3, 'Contact', 'How to get ahold of us.', '<p>Phone:</p><p>559-555-1212</p><a href="mailto:bob@bob.com">Bob</a>');
+INSERT INTO `content` (`id`, `pagename`,`pagetitle`,`pagecontent`) VALUES
+(1,'HOME','Welcome to our homepage, yo','<p>This is the page contenct</p>'),
+(2,'About','A little about us.','<p>We started with a simple idea: ball bearings. And then we made more ball bearings. The end.</p>'),(3,'Contact','How to get ahold of us.','<p>Phone:</p><p>559-555-1212</p><a href="mailto:bob@bob.com">Bob</a>');
 
 
 ALTER TABLE `content`
